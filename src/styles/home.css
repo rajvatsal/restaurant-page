@@ -1,0 +1,156 @@
+:root {
+  --side-mrg: 10px;
+  --header-pad: 20px;
+  --border-wid: 0.5px;
+  --header-hgt: 50px;
+  --logo-brd: var(--border-wid) solid white;
+}
+
+.grid {
+  display: grid;
+}
+
+section {
+  padding: var(--side-mrg);
+}
+
+body {
+  color: white;
+  background-color: black;
+}
+
+header {
+  display: flex;
+  height: var(--header-hgt);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--header-pad);
+  border: var(--border-wid) solid white;
+  margin: var(--side-mrg) var(--side-mrg) 0;
+}
+
+header > svg {
+  color: white;
+  width: 50px;
+}
+
+header > h1 {
+  translate: -50%;
+  border: var(--logo-brd);
+  padding: 0 20px;
+}
+
+section#hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--side-mrg);
+  max-height: calc(100vh - var(--header-hgt) - var(--side-mrg));
+  height: calc(100vh - var(--header-hgt) - var(--side-mrg));
+}
+
+section#hero > div {
+  translate: 0 -50%;
+  margin-left: calc(var(--header-pad) + var(--border-wid));
+}
+
+img.hero {
+  max-height: 100%;
+}
+
+section#about-us {
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section#about-us > h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 1px;
+  background-color: black;
+  position: relative;
+  top: -5px;
+  left: 50%;
+  translate: -50%;
+}
+
+section#opening-hours {
+  display: flex;
+  height: 100vh;
+}
+
+section#opening-hours > img {
+  max-height: 100%;
+  width: auto;
+}
+
+section#opening-hours > .right-side {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section#opening-hours > .right-side > .table {
+  grid-template: repeat(7, 1fr) / repeat(2, 1fr);
+  align-items: center;
+  min-width: 350px;
+}
+
+section#opening-hours > .right-side > .table > :nth-child(2n) {
+  text-align: end;
+  border-left: var(--logo-brd);
+  box-sizing: content-box;
+  width: calc(100%);
+}
+
+section#opening-hours > .right-side > h2::after {
+  content: "";
+  display: block;
+  background-color: white;
+  width: calc(100% + 150px);
+  height: 1px;
+  position: relative;
+  top: -3px;
+  left: 50%;
+  translate: -50%;
+}
+
+section#opening-hours {
+  padding: var(--side-mrg);
+}
+
+img.border {
+  border: var(--logo-brd);
+}
+
+section#location {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+section#location > .container {
+  grid-template: 1fr / 1fr 1.5fr;
+  flex: 1 1 auto;
+}
+
+section#location > .container > img {
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+  justify-self: end;
+}
+
+section#location > .container > div {
+  align-self: start;
+  padding-left: calc(var(--header-pad) + var(--side-mrg));
+}

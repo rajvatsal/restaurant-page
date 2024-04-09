@@ -7,5 +7,9 @@ module.exports = merge(common, {
 	devServer: {
 		static: "./dist",
 		watchFiles: ["./src/index.html"],
+		hot: true,
+		open: true,
+		port: 6969,
+		historyApiFallback: true,
 	},
 });
