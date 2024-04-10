@@ -42,6 +42,55 @@ function fillAboutUs(aboutUs) {
 	aboutUs.appendChild(createElement("p", "", "", paraContent));
 }
 
+function fillOpeningHours(oH) {
+	const tableData = [
+		["Sunday", "8am-9pm"],
+		["Monday", "8am-9pm"],
+		["Tuesday", "8am-9pm"],
+		["Wednesday", "8am-9pm"],
+		["Thursday", "8am-9pm"],
+		["Friday", "8am-9pm"],
+		["Saturday", "8am-9pm"],
+	];
+	const rightSide = createElement("div", "right-side");
+	rightSide.appendChild(createElement("h2", "", "", "Opening hours"));
+	const table = createElement("div", "grid table");
+	for (let day of tableData) {
+		for (let data of day) {
+			table.appendChild(createElement("span", "", "", data));
+		}
+	}
+	rightSide.appendChild(table);
+
+	oH.appendChild(
+		createElement(
+			"img",
+			"border",
+			"",
+			"",
+			"restaurant-indoors.jpg",
+			"Inside view of the restaurant",
+		),
+	);
+	oH.appendChild(rightSide);
+}
+
+function fillLocations(loc) {
+	const container = createElement("div", "container grid");
+	const div = createElement("div", "grid");
+	div.appendChild(createElement("h2", "", "", "Location"));
+	div.appendChild(
+		createElement("p", "", "", "Uttrakhand, Dehradun, 31 Street, chilliz"),
+	);
+	div.appendChild(createElement("p", "", "", "Phone: 78945612354682154"));
+	div.appendChild(createElement("p", "", "", "Email: totallyFake@mail.com"));
+	container.appendChild(div);
+	container.appendChild(
+		createElement("img", "border", "", "", "./map.jpeg", "map"),
+	);
+	loc.appendChild(container);
+}
+
 export default function home() {
 	const content = document.querySelector("div#content");
 	const sections = [
@@ -53,5 +102,8 @@ export default function home() {
 
 	fillHeroSection(sections[0]);
 	fillAboutUs(sections[1]);
+	fillOpeningHours(sections[2]);
+	fillLocations(sections[3]);
+
 	sections.forEach((section) => content.appendChild(section));
 }
