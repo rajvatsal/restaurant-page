@@ -1,8 +1,7 @@
-import "../styles/home.css";
 import "../assets/hero-image.jpg";
 import "../assets/restaurant-indoors.jpg";
 import "../assets/map.jpeg";
-import { createElement } from "../index.js";
+import { createElement, setStyles, cleanUp } from "../index.js";
 
 function fillHeroSection(hero) {
 	const div = createElement("div");
@@ -92,6 +91,9 @@ function fillLocations(loc) {
 }
 
 export default function home() {
+	cleanUp();
+	setStyles("home");
+
 	const content = document.querySelector("div#content");
 	const sections = [
 		createElement("section", "", "hero"),
