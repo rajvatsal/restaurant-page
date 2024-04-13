@@ -90,6 +90,12 @@ function fillLocations(loc) {
 	loc.appendChild(container);
 }
 
+const fillSection = [
+	fillHeroSection,
+	fillAboutUs,
+	fillOpeningHours,
+	fillLocations,
+];
 export default function home() {
 	cleanUp();
 	setStyles("home");
@@ -102,10 +108,8 @@ export default function home() {
 		createElement("section", "", "location"),
 	];
 
-	fillHeroSection(sections[0]);
-	fillAboutUs(sections[1]);
-	fillOpeningHours(sections[2]);
-	fillLocations(sections[3]);
-
-	sections.forEach((section) => content.appendChild(section));
+	sections.forEach((section, index) => {
+		fillSection[index](section);
+		content.appendChild(section);
+	});
 }
