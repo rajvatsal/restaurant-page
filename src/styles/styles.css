@@ -1,9 +1,11 @@
 :root {
   --side-mrg: 10px;
   --header-pad: 20px;
-  --border-wid: 0.5px;
+  --line-wid: 1px;
   --header-hgt: 50px;
-  --logo-brd: var(--border-wid) solid white;
+  --logo-brd: var(--line-wid) solid #323232;
+  --line-clr: #323232;
+  --background-clr: #131313;
   scrollbar-color: #ffffff0d transparent;
   scrollbar-width: thin;
 }
@@ -20,7 +22,7 @@ button {
 
 body {
   color: white;
-  background-color: black;
+  background-color: var(--background-clr);
 }
 
 header {
@@ -29,7 +31,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--header-pad);
-  border: var(--border-wid) solid white;
+  border: var(--logo-brd);
   margin: var(--side-mrg) var(--side-mrg) 0;
 }
 
@@ -60,7 +62,7 @@ section {
 
   section#hero > div {
     translate: 0 -50%;
-    margin-left: calc(var(--header-pad) + var(--border-wid));
+    margin-left: calc(var(--header-pad) + var(--side-mrg));
   }
 
   img.hero {
@@ -83,7 +85,7 @@ section {
     display: block;
     width: 70px;
     height: 1px;
-    background-color: black;
+    background-color: var(--line-clr);
     position: relative;
     top: -5px;
     left: 50%;
@@ -124,9 +126,9 @@ section {
   section#opening-hours > .right-side > h2::after {
     content: "";
     display: block;
-    background-color: white;
+    background-color: var(--line-clr);
     width: calc(100% + 150px);
-    height: 1px;
+    height: var(--line-wid);
     position: relative;
     top: -3px;
     left: 50%;
@@ -175,9 +177,20 @@ section {
   }
 
   div.dishes > div.dish {
+    --background-clr: #070707;
     display: grid;
     grid-template: 3fr 1fr / 1fr;
     border: var(--logo-brd);
+    background-color: var(--background-clr);
+    transition: all 180ms ease-out;
+  }
+
+  div.dish:hover {
+    --translate: -10px;
+    --shadow: 10px;
+    transform: scale(1);
+    translate: var(--translate) var(--translate);
+    box-shadow: var(--shadow) var(--shadow) 0px black;
   }
 
   div.dishes > div.dish > img {
