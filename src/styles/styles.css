@@ -12,6 +12,12 @@
   display: grid;
 }
 
+button {
+  background-color: transparent;
+  color: white;
+  border: var(--logo-brd);
+}
+
 body {
   color: white;
   background-color: black;
@@ -171,6 +177,7 @@ section {
   div.dishes > div.dish {
     display: grid;
     grid-template: 3fr 1fr / 1fr;
+    border: var(--logo-brd);
   }
 
   div.dishes > div.dish > img {
@@ -178,6 +185,7 @@ section {
     min-height: 0;
     height: 100%;
     width: 100%;
+    border-bottom: var(--logo-brd);
   }
 
   div.dishes > div.dish > div svg {
@@ -185,9 +193,30 @@ section {
   }
 
   div.dishes > div.dish > div.bottom > p {
-    overflow-y: scroll;
+    overflow-y: clip;
     height: 6ch;
-    scrollbar-width: thin;
-    scrollbar-color: #ffffff0d transparent;
+  }
+
+  div.bottom {
+    padding: calc(var(--side-mrg) + 2px);
+  }
+
+  div.bottom div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  div.dishes div.button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    padding-top: 25px;
+  }
+
+  div.dishes div.button > button {
+    width: 70px;
+    height: 32px;
   }
 }
