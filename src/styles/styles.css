@@ -135,7 +135,7 @@ header > svg {
 }
 
 header > h1 {
-  translate: -50%;
+  translate: calc(-50% - 40px);
   border: var(--logo-brd);
   padding: 0 20px;
   font-family: var(--header-fnt);
