@@ -1,3 +1,13 @@
+const body = document.querySelector("body");
+const root = document.querySelector(":root");
+
+export const setStyles = (style) => root.setAttribute("class", style);
+
+export function cleanUp() {
+	document.querySelector("div#content").remove();
+	body.appendChild(createElement("div", "", "content"));
+}
+
 export function createElement(elmName, elmClasses, elmIds, text, src, alt) {
 	const element = document.createElement(elmName);
 	if (elmClasses) element.setAttribute("class", elmClasses);
