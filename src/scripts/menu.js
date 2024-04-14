@@ -3,13 +3,8 @@ import "../assets/egg.jpg";
 import "../assets/beef.jpg";
 import "../assets/crab.jpg";
 import "../assets/salad.jpg";
-
-import {
-	createElement,
-	setStyles,
-	cleanUp,
-	createShoppingCart,
-} from "../index.js";
+import { setStyles, cleanUp } from "../index.js";
+import { createElement, createShoppingCart } from "./util.js";
 
 function createDish(image, name, desc, price) {
 	const pic = createElement("img", "", "", "", `./${image}`, "Food image");

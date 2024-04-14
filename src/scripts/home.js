@@ -1,7 +1,8 @@
 import "../assets/hero-image.jpg";
 import "../assets/restaurant-indoors.jpg";
 import "../assets/map.jpeg";
-import { createElement, setStyles, cleanUp } from "../index.js";
+import { setStyles, cleanUp } from "../index.js";
+import { createElement } from "./util.js";
 
 function fillHeroSection(hero) {
 	const div = createElement("div");

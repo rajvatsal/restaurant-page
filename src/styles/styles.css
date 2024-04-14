@@ -158,4 +158,25 @@ section {
 }
 
 :root.menu {
+  div.dishes {
+    display: grid;
+    grid-template: 500px / repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  div.dishes > div.dish {
+    display: grid;
+    grid-template: 3fr 1fr / 1fr;
+  }
+
+  div.dishes > div.dish > img {
+    object-fit: cover;
+    min-height: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  div.dishes > div.dish > div svg {
+    height: 20px;
+  }
 }
