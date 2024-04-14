@@ -4,6 +4,8 @@
   --border-wid: 0.5px;
   --header-hgt: 50px;
   --logo-brd: var(--border-wid) solid white;
+  scrollbar-color: #ffffff0d transparent;
+  scrollbar-width: thin;
 }
 
 .grid {
@@ -180,5 +182,12 @@ section {
 
   div.dishes > div.dish > div svg {
     height: 20px;
+  }
+
+  div.dishes > div.dish > div.bottom > p {
+    overflow-y: scroll;
+    height: 6ch;
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff0d transparent;
   }
 }
