@@ -188,7 +188,7 @@ section {
   div.dish:hover {
     --translate: -10px;
     --shadow: 10px;
-    transform: scale(1);
+    transform: scale(1.01);
     translate: var(--translate) var(--translate);
     box-shadow: var(--shadow) var(--shadow) 0px black;
   }
