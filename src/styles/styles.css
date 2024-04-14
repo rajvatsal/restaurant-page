@@ -159,8 +159,10 @@ section {
 
 :root.menu {
   div.dishes {
+    --row: 500px;
     display: grid;
-    grid-template: 500px / repeat(auto-fill, minmax(300px, 1fr));
+    grid-template: var(--row) / repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: var(--row);
     gap: 20px;
   }
 

@@ -1,8 +1,9 @@
-import "../assets/panner.jpg";
-import "../assets/egg.jpg";
-import "../assets/beef.jpg";
-import "../assets/crab.jpg";
-import "../assets/salad.jpg";
+import "../assets/palak-paneer.jpg";
+import "../assets/biryani.jpg";
+import "../assets/panni-puri.jpg";
+import "../assets/masala-dosa.jpg";
+import "../assets/butter-chicken.jpg";
+import "../assets/malai-kofta.jpg";
 import {
 	createElement,
 	createShoppingCart,
@@ -36,11 +37,36 @@ function createDish(image, name, desc, price) {
 }
 
 const dishes = [
-	createDish("panner.jpg", "Panner Tikka", "Delicious Tikka", "$10"),
-	createDish("egg.jpg", "Egg", "Delicious Egg", "$12"),
-	createDish("beef.jpg", "Beef", "Delicious Beef", "$9"),
-	createDish("crab.jpg", "Crab", "Delicious Crab", "$15"),
-	createDish("salad.jpg", "Salad", "Delicious Salad", "$9"),
+	createDish(
+		"butter-chicken.jpg",
+		"Butter Chicken",
+		"A rich and creamy chicken dish cooked in a tomato-based gravy with butter and cream, often flavored with various spices.",
+		"500Rs",
+	),
+	createDish(
+		"palak-paneer.jpg",
+		"Palak Paneer",
+		"A vegetarian dish made from spinach (palak) and paneer (Indian cottage cheese). It's typically cooked with garlic, garam masala, and other spices to create a flavorful gravy.",
+		"800Rs",
+	),
+	createDish(
+		"masala-dosa.jpg",
+		"Masala Dosa",
+		"A South Indian specialty, masala dosa is a fermented crepe made from rice batter and black lentils, filled with a spiced potato mixture and served with coconut chutney and sambar (a lentil-based stew).",
+		"390Rs",
+	),
+	createDish(
+		"panni-puri.jpg",
+		"Pani Puri",
+		"A popular street food snack consisting of hollow puri (crispy round shells) filled with a mixture of flavored water, tamarind chutney, chaat masala, potato, onion, and chickpeas. It offers a burst of sweet, sour, tangy, and spicy flavors in every bite.",
+		"200Rs",
+	),
+	createDish(
+		"malai-kofta.jpg",
+		"Malai Kofta",
+		"A rich and indulgent vegetarian dish made from deep-fried dumplings (koftas) made of paneer, potatoes, nuts, and spices, served in a creamy tomato-based gravy flavored with cream, butter, and various spices. It's a favorite at many Indian restaurants for its luxurious taste and texture.",
+		"790Rs",
+	),
 ];
 
 export default function menu() {
