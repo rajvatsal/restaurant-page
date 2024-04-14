@@ -1,11 +1,77 @@
+@font-face {
+  font-family: "Inknut antiqua";
+  src: url("../assets/inknut-antiqua/medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inknut antiqua";
+  src: url("../assets/inknut-antiqua/semi-bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inknut antiqua";
+  src: url("../assets/inknut-antiqua/bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inknut antiqua";
+  src: url("../assets/inknut-antiqua/light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inknut antiqua";
+  src: url("../assets/inknut-antiqua/normal.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inknut antiqua";
+  src: url("../assets/inknut-antiqua/regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inknut antiqua";
+  src: url("../assets/inknut-antiqua/extrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "inika";
+  src: url("../assets/inika/bold-inika.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "inika";
+  src: url("../assets/inika/regular-inika.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ingrid darling";
+  src: url("../assets/ingrid-darling/IngridDarling-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --side-mrg: 10px;
   --header-pad: 20px;
-  --line-wid: 1px;
+  --line-wid: 1.5px;
   --header-hgt: 50px;
   --logo-brd: var(--line-wid) solid #323232;
   --line-clr: #323232;
   --background-clr: #131313;
+  --header-fnt: "Ingrid darling", Roboto, Helvetica, serif;
+  --heading-fnt: "Inknut antiqua", serif;
+  --text-fnt: "inika", sans-serif;
+  --aboutUs-backClr: #f1f0f0;
+  --animation-time: all 200ms ease-out;
   scrollbar-color: #ffffff0d transparent;
   scrollbar-width: thin;
 }
@@ -14,10 +80,31 @@
   display: grid;
 }
 
-button {
+button:not(header button) {
   background-color: transparent;
   color: white;
   border: var(--logo-brd);
+  transition: var(--animation-time);
+}
+
+button:not(header button):hover {
+  background-color: var(--aboutUs-backClr);
+  color: var(--background-clr);
+  border: 1px solid var(--aboutUs-backClr);
+  cursor: pointer;
+}
+
+h1,
+h2,
+button {
+  font-family: var(--heading-fnt);
+  font-weight: 400;
+}
+
+p,
+span {
+  font-family: var(--text-fnt);
+  font-weight: 400;
 }
 
 body {
@@ -35,15 +122,24 @@ header {
   margin: var(--side-mrg) var(--side-mrg) 0;
 }
 
+header > nav > button {
+  background-color: var(--background-clr);
+  color: var(--aboutUs-backClr);
+  border: none;
+  cursor: pointer;
+}
+
 header > svg {
   color: white;
-  width: 50px;
+  width: 28px;
 }
 
 header > h1 {
   translate: -50%;
   border: var(--logo-brd);
   padding: 0 20px;
+  font-family: var(--header-fnt);
+  font-weight: normal;
 }
 
 section {
@@ -70,7 +166,7 @@ section {
   }
 
   section#about-us {
-    background-color: white;
+    background-color: var(--aboutUs-backClr);
     color: black;
     min-height: 100vh;
     text-align: center;
@@ -95,6 +191,22 @@ section {
   section#opening-hours {
     display: flex;
     height: 100vh;
+  }
+
+  section#opening-hours > .right-side {
+    position: relative;
+  }
+
+  section#opening-hours > .right-side::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: var(--line-wid);
+    width: 90%;
+    left: 50%;
+    top: 100%;
+    translate: -50%;
+    background-color: var(--line-clr);
   }
 
   section#opening-hours > img {

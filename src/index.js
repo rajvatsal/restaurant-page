@@ -1,5 +1,8 @@
+//css
 import "./styles/josh's-reset.css";
 import "./styles/styles.css";
+
+//pages
 import home from "./scripts/home.js";
 import menu from "./scripts/menu.js";
 
