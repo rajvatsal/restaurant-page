@@ -16,7 +16,11 @@ function fillHeroSection(hero) {
 	div.appendChild(
 		createElement("h1", "", "", "Best food you will find in Dehradun"),
 	);
-	div.appendChild(createElement("button", "", "", "Learn More"));
+	const button = createElement("button", "", "");
+	const link = createElement("a", "", "", "Learn More");
+	link.href = "#about-us";
+	button.appendChild(link);
+	div.appendChild(button);
 
 	hero.appendChild(div);
 	hero.appendChild(image);
