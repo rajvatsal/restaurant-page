@@ -101,6 +101,10 @@ button {
   font-weight: 400;
 }
 
+h2 {
+  font-size: 2.5rem;
+}
+
 p,
 span {
   font-family: var(--text-fnt);
@@ -187,24 +191,30 @@ section {
   section#about-us {
     background-color: var(--aboutUs-backClr);
     color: black;
-    min-height: 100vh;
-    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding: 100px 0;
     align-items: center;
+  }
+
+  section#about-us > p {
+    width: min(1100px, calc(100vw - 20px));
+    line-height: 1.5;
+  }
+
+  section#about-us > h2 {
+    width: min(1100px, calc(100vw - 20px));
+    padding-bottom: 10px;
   }
 
   section#about-us > h2::after {
     content: "";
     display: block;
-    width: 70px;
+    width: 308px;
     height: 1px;
-    background-color: var(--line-clr);
+    background-color: #c1c1c1;
     position: relative;
-    top: -5px;
-    left: 50%;
-    translate: -50%;
+    top: -10px;
   }
 
   section#opening-hours {
