@@ -97,6 +97,7 @@ button:not(header button):hover {
 
 h1,
 h2,
+h3,
 button {
   font-family: var(--heading-fnt);
   font-weight: 400;
@@ -325,6 +326,15 @@ a {
 }
 
 :root.menu {
+  --margin: calc(var(--hd-padding) + 6px);
+  section.menu > h2 {
+    margin: var(--margin) var(--margin) 20px;
+  }
+
+  section.menu > div.dishes {
+    margin: 0 var(--margin);
+  }
+
   div.dishes {
     --row: 500px;
     display: grid;

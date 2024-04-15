@@ -13,7 +13,7 @@ import {
 
 function createDish(image, name, desc, price) {
 	const pic = createElement("img", "", "", "", `./${image}`, "Food image");
-	const dishName = createElement("h2", "", "", name);
+	const dishName = createElement("h3", "", "", name);
 	const dishPrice = createElement("span", "", "", price);
 	const dishDesc = createElement("p", "", "", desc);
 
@@ -75,7 +75,7 @@ export default function menu() {
 
 	const content = document.getElementById("content");
 	const section = createElement("section", "menu");
-	const heading = createElement("h1", "", "", "Our Menu");
+	const heading = createElement("h2", "", "", "Our Menu");
 	const dishesContainer = createElement("div", "dishes");
 
 	dishesContainer.appendChildren(...dishes);
