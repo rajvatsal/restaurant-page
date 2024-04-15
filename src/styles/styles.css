@@ -61,9 +61,9 @@
 
 :root {
   --side-mrg: 10px;
-  --header-pad: 20px;
+  --hd-padding: 31px;
+  --hd-height: 60px;
   --line-wid: 1.5px;
-  --header-hgt: 50px;
   --logo-brd: var(--line-wid) solid #323232;
   --line-clr: #323232;
   --background-clr: #131313;
@@ -114,10 +114,10 @@ body {
 
 header {
   display: flex;
-  height: var(--header-hgt);
+  height: var(--hd-height);
   align-items: center;
   justify-content: space-between;
-  padding: 0 var(--header-pad);
+  padding: 0 var(--hd-padding);
   border: var(--logo-brd);
   margin: var(--side-mrg) var(--side-mrg) 0;
 }
@@ -127,6 +127,7 @@ header > nav > button {
   color: var(--aboutUs-backClr);
   border: none;
   cursor: pointer;
+  font-size: 0.938rem;
 }
 
 header > svg {
@@ -135,11 +136,16 @@ header > svg {
 }
 
 header > h1 {
-  translate: calc(-50% - 40px);
-  border: var(--logo-brd);
+  translate: calc(-50% - 25px);
+  display: flex;
+  align-items: center;
+  height: 100%;
   padding: 0 20px;
+  border-left: var(--logo-brd);
+  border-right: var(--logo-brd);
   font-family: var(--header-fnt);
   font-weight: normal;
+  font-size: 2.5rem;
 }
 
 section {
@@ -152,13 +158,26 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: var(--side-mrg);
-    max-height: calc(100vh - var(--header-hgt) - var(--side-mrg));
-    height: calc(100vh - var(--header-hgt) - var(--side-mrg));
+    max-height: calc(100vh - var(--hd-height) - var(--side-mrg));
+    height: calc(100vh - var(--hd-height) - var(--side-mrg));
+  }
+
+  section#hero h1 {
+    font-size: 3.807rem;
+    width: 500px;
+    line-height: 1.2;
+  }
+
+  section#hero button {
+    font-size: 1.15rem;
+    padding: 1rem 1.9rem;
+    margin-top: 40px;
   }
 
   section#hero > div {
-    translate: 0 -50%;
-    margin-left: calc(var(--header-pad) + var(--side-mrg));
+    margin-left: calc(
+      var(--hd-padding) + 7px
+    ); /* cuz the buttons also have padding */
   }
 
   img.hero {
@@ -275,7 +294,7 @@ section {
 
   section#location > .container > div {
     align-self: start;
-    padding-left: calc(var(--header-pad) + var(--side-mrg));
+    padding-left: calc(var(--hd-padding) + var(--side-mrg));
   }
 }
 
