@@ -241,8 +241,8 @@ a {
     content: "";
     display: block;
     position: absolute;
-    height: var(--line-wid);
-    width: 90%;
+    border-top: solid 1.5px var(--line-clr);
+    width: 95%;
     left: 50%;
     top: 100%;
     translate: -50%;
@@ -264,25 +264,30 @@ a {
 
   section#opening-hours > .right-side > .table {
     grid-template: repeat(7, 1fr) / repeat(2, 1fr);
+    min-width: 450px;
+    flex-grow: 0.5;
+    align-items: stretch;
+    padding-top: 5px;
+  }
+
+  section#opening-hours > .right-side > .table > span {
+    display: grid;
     align-items: center;
-    min-width: 350px;
   }
 
   section#opening-hours > .right-side > .table > :nth-child(2n) {
     text-align: end;
     border-left: var(--logo-brd);
-    box-sizing: content-box;
-    width: calc(100%);
   }
 
   section#opening-hours > .right-side > h2::after {
     content: "";
     display: block;
     background-color: var(--line-clr);
-    width: calc(100% + 150px);
-    height: var(--line-wid);
+    width: calc(100% + 80px);
+    border-top: solid 1.5px var(--line-clr);
     position: relative;
-    top: -3px;
+    top: 0px;
     left: 50%;
     translate: -50%;
   }
