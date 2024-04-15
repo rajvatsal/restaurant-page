@@ -327,6 +327,7 @@ a {
 
 :root.menu {
   --margin: calc(var(--hd-padding) + 6px);
+
   section.menu > h2 {
     margin: var(--margin) var(--margin) 20px;
   }
@@ -336,9 +337,10 @@ a {
   }
 
   div.dishes {
-    --row: 500px;
+    --row: 430px;
+    --column: 300px;
     display: grid;
-    grid-template: var(--row) / repeat(auto-fill, minmax(300px, 1fr));
+    grid-template: var(--row) / repeat(auto-fill, minmax(var(--column), 1fr));
     grid-auto-rows: var(--row);
     gap: 20px;
   }
@@ -346,7 +348,7 @@ a {
   div.dishes > div.dish {
     --background-clr: #070707;
     display: grid;
-    grid-template: 3fr 1fr / 1fr;
+    grid-template: 2.1fr 1.2fr / 1fr;
     border: var(--logo-brd);
     background-color: var(--background-clr);
     transition: all 180ms ease-out;
@@ -358,6 +360,24 @@ a {
     transform: scale(1.01);
     translate: var(--translate) var(--translate);
     box-shadow: var(--shadow) var(--shadow) 0px black;
+  }
+
+  div.bottom h3 {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  div.bottom :first-child :last-child {
+    font-family: "inika";
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  div.bottom .name :last-child::before {
+    content: "₹";
+    font-size: 0.9rem;
+    font-weight: 100;
+    color: #a1a1a1;
   }
 
   div.dishes > div.dish > img {
@@ -378,13 +398,17 @@ a {
   }
 
   div.bottom {
-    padding: calc(var(--side-mrg) + 2px);
+    --padding: 10px;
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
   }
 
   div.bottom div:first-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 3px;
   }
 
   div.dishes div.button {
@@ -392,11 +416,19 @@ a {
     align-items: center;
     justify-content: flex-end;
     gap: 5px;
-    padding-top: 25px;
+    margin-top: auto;
   }
 
   div.dishes div.button > button {
     width: 70px;
     height: 32px;
+    font-size: 0.83rem;
+  }
+
+  div.bottom p {
+    font-size: 0.75rem;
+    color: #cdcdcd;
+    line-heihgt: 1.23;
+    position: relative;
   }
 }

@@ -14,7 +14,7 @@ import {
 function createDish(image, name, desc, price) {
 	const pic = createElement("img", "", "", "", `./${image}`, "Food image");
 	const dishName = createElement("h3", "", "", name);
-	const dishPrice = createElement("span", "", "", price);
+	const dishPrice = createElement("div", "", "", price);
 	const dishDesc = createElement("p", "", "", desc);
 
 	const dish = createElement("div", "dish container");
@@ -22,7 +22,7 @@ function createDish(image, name, desc, price) {
 	const btn = createElement("button", "", "", "buy");
 	const shoppingCart = createShoppingCart();
 	const btnShoppingCartContainer = createElement("div", "button");
-	const priceNameContainer = createElement("div");
+	const priceNameContainer = createElement("div", "name price");
 
 	btnShoppingCartContainer.appendChildren(btn, shoppingCart);
 	priceNameContainer.appendChildren(dishName, dishPrice);
@@ -41,31 +41,31 @@ const dishes = [
 		"butter-chicken.jpg",
 		"Butter Chicken",
 		"A rich and creamy chicken dish cooked in a tomato-based gravy with butter and cream, often flavored with various spices.",
-		"500Rs",
+		"500",
 	),
 	createDish(
 		"palak-paneer.jpg",
 		"Palak Paneer",
 		"A vegetarian dish made from spinach (palak) and paneer (Indian cottage cheese). It's typically cooked with garlic, garam masala, and other spices to create a flavorful gravy.",
-		"800Rs",
+		"800",
 	),
 	createDish(
 		"masala-dosa.jpg",
 		"Masala Dosa",
 		"A South Indian specialty, masala dosa is a fermented crepe made from rice batter and black lentils, filled with a spiced potato mixture and served with coconut chutney and sambar (a lentil-based stew).",
-		"390Rs",
+		"390",
 	),
 	createDish(
 		"panni-puri.jpg",
 		"Pani Puri",
 		"A popular street food snack consisting of hollow puri (crispy round shells) filled with a mixture of flavored water, tamarind chutney, chaat masala, potato, onion, and chickpeas. It offers a burst of sweet, sour, tangy, and spicy flavors in every bite.",
-		"200Rs",
+		"200",
 	),
 	createDish(
 		"malai-kofta.jpg",
 		"Malai Kofta",
 		"A rich and indulgent vegetarian dish made from deep-fried dumplings (koftas) made of paneer, potatoes, nuts, and spices, served in a creamy tomato-based gravy flavored with cream, butter, and various spices. It's a favorite at many Indian restaurants for its luxurious taste and texture.",
-		"790Rs",
+		"790",
 	),
 ];
 
