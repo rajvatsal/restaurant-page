@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config ./webpack.prod.js --progress",
-    "start": "webpack serve --open --config ./webpack.dev.js --progress"
+    "start": "webpack serve --open --config ./webpack.dev.js --progress",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
   "author": "",
