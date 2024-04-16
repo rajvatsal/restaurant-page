@@ -5,8 +5,9 @@ import "./styles/styles.css";
 //pages
 import home from "./scripts/home.js";
 import menu from "./scripts/menu.js";
+import "./scripts/header.js";
 
-const buttons = document.querySelectorAll("header>nav>button");
+const buttons = document.querySelectorAll("header>nav>ul button");
 
 buttons.forEach((button, index) => {
 	let callBack = null;

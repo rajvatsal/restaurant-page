@@ -7,5 +7,9 @@
 - ~~Align (heading && dishes)/Add padding between dishes so that on hover they don't cover anything~~
 - ~~Resize dishes~~
 - ~~Change size/color of fonts in dishes~~
-- Make this shit responsive first the about page then menu page
+- Make this shit responsive
+  - ~~Make header responsive~~
+  - Make menu responsive
+  - Make home responsive
+- Fix font problem on windows
 - Upload on discord :)

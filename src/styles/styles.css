@@ -77,6 +77,44 @@
   scroll-behavior: smooth;
 }
 
+.x-mark,
+.three-bars {
+  display: none;
+  z-index: 99999;
+}
+
+::marker {
+  content: "";
+}
+
+@media only screen and (max-width: 600px) {
+  header > nav {
+    position: fixed;
+    inset: 0 30% 0 0;
+    background-color: #131313eb;
+    z-index: 9999;
+    padding-top: 30vh;
+    backdrop-filter: blur(20px);
+    transform: translateX(-100%);
+    transition: transform 500ms ease-out;
+  }
+
+  header > nav button {
+    padding-bottom: 2px;
+  }
+
+  .three-bars {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  header > nav > ul {
+    display: flex;
+    padding-left: 0;
+  }
+}
+
 .grid {
   display: grid;
 }
@@ -126,10 +164,11 @@ header {
   padding: 0 var(--hd-padding);
   border: var(--logo-brd);
   margin: var(--side-mrg) var(--side-mrg) 0;
+  position: relative;
 }
 
-header > nav > button {
-  background-color: var(--background-clr);
+header > nav button {
+  background-color: transparent;
   color: var(--aboutUs-backClr);
   border: none;
   cursor: pointer;
@@ -142,9 +181,6 @@ header > svg {
 }
 
 header > h1 {
-  translate: calc(-50% - 25px);
-  display: flex;
-  align-items: center;
   height: 100%;
   padding: 0 20px;
   border-left: var(--logo-brd);
@@ -152,6 +188,10 @@ header > h1 {
   font-family: var(--header-fnt);
   font-weight: normal;
   font-size: 2.5rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 section {
