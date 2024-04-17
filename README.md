@@ -9,7 +9,7 @@
 - ~~Change size/color of fonts in dishes~~
 - Make this shit responsive
   - ~~Make header responsive~~
-  - Make menu responsive
+  - ~~Make menu responsive~~
   - Make home responsive
 - Fix font problem on windows
 - Upload on discord :)
