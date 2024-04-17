@@ -221,16 +221,15 @@ a {
 :root.home {
   section#hero {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: var(--side-mrg);
-    max-height: calc(100vh - var(--hd-height) - var(--side-mrg));
-    height: calc(100vh - var(--hd-height) - var(--side-mrg));
   }
 
   section#hero h1 {
-    font-size: 3.807rem;
-    width: 500px;
+    font-size: clamp(40px, 5.8vw, 3.807rem);
+    max-width: min(100vw, 500px);
     line-height: 1.2;
   }
 
@@ -247,7 +246,7 @@ a {
   }
 
   img.hero {
-    max-height: 100%;
+    height: calc(100vh - var(--hd-height) - 3 * var(--side-mrg));
   }
 
   section#about-us {
@@ -281,11 +280,15 @@ a {
 
   section#opening-hours {
     display: flex;
-    height: 100vh;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    padding: var(--side-mrg);
   }
 
   section#opening-hours > .right-side {
     position: relative;
+    max-width: min(450px, 100vw);
+    margin: 0 auto;
   }
 
   section#opening-hours > .right-side::after {
@@ -301,7 +304,7 @@ a {
   }
 
   section#opening-hours > img {
-    max-height: 100%;
+    max-height: calc(100vh - 2 * var(--side-mrg));
     width: auto;
   }
 
@@ -315,7 +318,7 @@ a {
 
   section#opening-hours > .right-side > .table {
     grid-template: repeat(7, 1fr) / repeat(2, 1fr);
-    min-width: 450px;
+    width: 100%;
     flex-grow: 0.5;
     align-items: stretch;
     padding-top: 5px;
@@ -343,22 +346,20 @@ a {
     translate: -50%;
   }
 
-  section#opening-hours {
-    padding: var(--side-mrg);
-  }
-
   img.border {
     border: var(--logo-brd);
   }
 
   section#location {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     min-height: 100vh;
   }
 
   section#location > .container {
-    grid-template: 1fr / 1fr 1.5fr;
+    display: flex;
+    flex-wrap: wrap;
     flex: 1 1 auto;
   }
 
@@ -367,9 +368,11 @@ a {
     width: 100%;
     height: 400px;
     justify-self: end;
+    flex: 1.5 1 0;
   }
 
   section#location > .container > div {
+    flex: 1 1 0;
     align-self: start;
     padding-left: calc(var(--hd-padding) + var(--side-mrg));
   }
@@ -480,5 +483,26 @@ a {
     color: #cdcdcd;
     line-heihgt: 1.23;
     position: relative;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  #hero {
+    flex-direction: column-reverse !important;
+    align-items: flex-start !important;
+    gap: 30px;
+    padding-bottom: 50px !important;
+  }
+
+  #hero :first-child {
+    margin: 0 0 !important;
+  }
+
+  img {
+    height: auto !important;
+  }
+
+  #location > .container > .grid {
+    padding-left: 0px !important;
   }
 }
