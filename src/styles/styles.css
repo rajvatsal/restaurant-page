@@ -409,7 +409,7 @@ a {
 }
 
 :root.menu {
-  button {
+  button:not(header button) {
     font-family: var(--fnt-regular-text);
   }
 
