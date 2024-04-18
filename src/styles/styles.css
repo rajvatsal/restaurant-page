@@ -1,5 +1,11 @@
 /* --- roboto --- */
 @font-face {
+  font-family: "robotoitalic";
+  src: url("../assets/web fonts/roboto_lightitalic_macroman/Roboto-LightItalic-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "robotoregular";
   src: url("../assets/web fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff");
   font-weight: normal;
@@ -68,26 +74,14 @@
   font-style: normal;
 }
 /* --- inknut antiqua --- */
-/* --- inika --- */
-@font-face {
-  font-family: "inika";
-  src: url("../assets/inika/bold-inika.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "inika";
-  src: url("../assets/inika/regular-inika.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
+/* --- ingrid darling --- */
 @font-face {
   font-family: "Ingrid darling";
   src: url("../assets/ingrid-darling/IngridDarling-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-/* --- inika --- */
+/* --- ingrid darling --- */
 :root {
   --side-mrg: 10px;
   --hd-padding: 31px;
@@ -98,9 +92,11 @@
   --background-clr: #131313;
   --header-fnt: "Ingrid darling", Roboto, Helvetica, serif;
   --heading-fnt: "Inknut antiqua", serif;
-  --text-fnt: "inika", sans-serif;
+  --text-fnt: "robotoitalic", sans-serif;
   --aboutUs-backClr: #f1f0f0;
   --animation-time: all 200ms ease-out;
+  --fnt-bold-small-heading: "robotobold_italic", sans-serif;
+  --fnt-regular-text: "robotoregular", sans-serif;
   scrollbar-color: #575757 #2d2d2d;
   scrollbar-width: thin;
   scroll-behavior: smooth;
@@ -174,10 +170,13 @@ button:not(header button):hover {
 
 h1,
 h2,
-h3,
-button {
+header button {
   font-family: var(--heading-fnt);
   font-weight: 400;
+}
+
+h3 {
+  font-family: var(--fnt-bold-small-heading);
 }
 
 h2 {
@@ -410,6 +409,10 @@ a {
 }
 
 :root.menu {
+  button {
+    font-family: var(--fnt-regular-text);
+  }
+
   --margin: calc(var(--hd-padding) + 6px);
 
   section.menu > h2 {
@@ -452,7 +455,7 @@ a {
   }
 
   div.bottom :first-child :last-child {
-    font-family: "inika";
+    font-family: var(--fnt-bold-small-heading);
     font-size: 1.5rem;
     font-weight: 400;
   }
