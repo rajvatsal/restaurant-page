@@ -19,7 +19,7 @@ function createDish(image, name, desc, price) {
 
 	const dish = createElement("div", "dish container");
 	const bottomSection = createElement("div", "bottom");
-	const btn = createElement("button", "", "", "buy");
+	const btn = createElement("button", "", "", "Order");
 	const shoppingCart = createShoppingCart();
 	const btnShoppingCartContainer = createElement("div", "button");
 	const priceNameContainer = createElement("div", "name price");
