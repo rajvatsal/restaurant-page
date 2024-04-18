@@ -500,7 +500,7 @@ a {
     margin: 0 0 !important;
   }
 
-  img {
+  :root.home img {
     height: auto !important;
   }
 
