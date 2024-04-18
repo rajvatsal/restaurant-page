@@ -1,3 +1,30 @@
+/* --- roboto --- */
+@font-face {
+  font-family: "robotoregular";
+  src: url("../assets/web fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotothin";
+  src: url("../assets/web fonts/roboto_thin_macroman/Roboto-Thin-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotoblack";
+  src: url("../assets/web fonts/roboto_bold_macroman/Roboto-Bold-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotobold_italic";
+  src: url("../assets/web fonts/roboto_bolditalic_macroman/Roboto-BoldItalic-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* --- roboto --- */
+/* --- inknut antiqua --- */
 @font-face {
   font-family: "Inknut antiqua";
   src: url("../assets/inknut-antiqua/medium.woff") format("woff");
@@ -40,6 +67,8 @@
   font-weight: 800;
   font-style: normal;
 }
+/* --- inknut antiqua --- */
+/* --- inika --- */
 @font-face {
   font-family: "inika";
   src: url("../assets/inika/bold-inika.woff2") format("woff2");
@@ -58,7 +87,7 @@
   font-weight: normal;
   font-style: normal;
 }
-
+/* --- inika --- */
 :root {
   --side-mrg: 10px;
   --hd-padding: 31px;

@@ -11,5 +11,5 @@
   - ~~Make header responsive~~
   - ~~Make menu responsive~~
   - ~~Make home responsive~~
-- Fix font problem on windows
+- Use different font for paragraphs
 - Upload on discord :)
