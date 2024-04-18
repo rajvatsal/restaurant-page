@@ -100,6 +100,8 @@
   scrollbar-color: #575757 #2d2d2d;
   scrollbar-width: thin;
   scroll-behavior: smooth;
+  color: white;
+  background-color: var(--background-clr);
 }
 
 .x-mark,
@@ -189,11 +191,6 @@ p,
 span {
   font-family: var(--text-fnt);
   font-weight: 400;
-}
-
-body {
-  color: white;
-  background-color: var(--background-clr);
 }
 
 header {
